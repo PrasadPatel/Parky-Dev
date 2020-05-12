@@ -116,7 +116,7 @@ namespace ParkyAPI.Controllers
 
             var nationalParkObj = _mapper.Map<NationalPark>(nationalParkDto);
             if (!_npRepo.UpdateNationalPark(nationalParkObj))
-2            {
+            {
                 ModelState.AddModelError("", $"Something went wrong while updating National Park {nationalParkObj.Name}");
                 return StatusCode(500, ModelState);
             }
