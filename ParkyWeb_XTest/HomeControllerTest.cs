@@ -79,7 +79,6 @@ namespace ParkyWeb_XTest
             _homeController.Url = MockUrlHelper("index").Object;
             _mockAccRepo.Setup(repo => repo.LoginAsync(SD.AccountAPIPath + "authenticate/", user)).
                 Returns(Task.FromResult<User>(user));
-            
             //Act
             var result = await _homeController.Login(user) as RedirectToActionResult;
             //Assert

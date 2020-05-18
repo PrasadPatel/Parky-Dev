@@ -400,3 +400,4 @@ D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\staticwebassets\ParkyW
 D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.dll
 D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.pdb
 D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.genruntimeconfig.cache
+D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.csprojAssemblyReference.cache

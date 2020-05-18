@@ -463,3 +463,5 @@ D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.c
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.dll
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.pdb
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.genruntimeconfig.cache
+D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.Resource.resources
+D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.csproj.GenerateResource.cache
