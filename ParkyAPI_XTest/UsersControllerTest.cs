@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Moq;
 using ParkyAPI;
 using ParkyAPI.Controllers;
 using ParkyAPI.Model;
+using ParkyAPI.ParkyMapper;
 using ParkyAPI.Repository.IRepository;
 using System;
 using System.Collections.Generic;
@@ -19,12 +21,14 @@ namespace ParkyAPI_XTest
     public class UsersControllerTest
     {
         private readonly Mock<IUserRepository> _userMockRepo;
+        private readonly IMapper _mapper;
         private readonly UsersController _usersController;
         
         public UsersControllerTest()
         {
             _userMockRepo = new Mock<IUserRepository>();
-            _usersController = new UsersController(_userMockRepo.Object);
+            _mapper = new MapperConfiguration(c => c.AddProfile<ParkyMappings>()).CreateMapper();
+            _usersController = new UsersController(_userMockRepo.Object, _mapper);
         }
 
         [Fact]
