@@ -367,7 +367,6 @@ D:\ASP .Net Core 3\Parky\ParkyWeb\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnaly
 D:\ASP .Net Core 3\Parky\ParkyWeb\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\ASP .Net Core 3\Parky\ParkyWeb\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\ASP .Net Core 3\Parky\ParkyWeb\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.csprojAssemblyReference.cache
 D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.csproj.CoreCompileInputs.cache
 D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.MvcApplicationPartsAssemblyInfo.cs
 D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.MvcApplicationPartsAssemblyInfo.cache
@@ -401,3 +400,4 @@ D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\staticwebassets\ParkyW
 D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.dll
 D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.pdb
 D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.genruntimeconfig.cache
+D:\ASP .Net Core 3\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.csprojAssemblyReference.cache

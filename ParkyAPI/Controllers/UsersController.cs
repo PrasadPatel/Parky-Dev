@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,10 +18,12 @@ namespace ParkyAPI.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserRepository _userRepo;
+        private readonly IMapper _mapper;
 
-        public UsersController(IUserRepository userRepo)
+        public UsersController(IUserRepository userRepo, IMapper mapper)
         {
             _userRepo = userRepo;
+            _mapper = mapper;
         }
 
         [AllowAnonymous]
