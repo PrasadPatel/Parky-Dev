@@ -456,7 +456,6 @@ D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\bin\Debug\netcoreapp3.1\zh-Hant\Microsof
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\bin\Debug\netcoreapp3.1\ParkyWeb.dll
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\bin\Debug\netcoreapp3.1\ParkyWeb.pdb
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.csprojAssemblyReference.cache
-D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.csproj.CoreCompileInputs.cache
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.AssemblyInfoInputs.cache
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.AssemblyInfo.cs
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.csproj.CopyComplete
@@ -465,3 +464,4 @@ D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.p
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.genruntimeconfig.cache
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.Resource.resources
 D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.csproj.GenerateResource.cache
+D:\ASP .Net Core 3\Parky\ParkyWeb_XTest\obj\Debug\netcoreapp3.1\ParkyWeb_XTest.csproj.CoreCompileInputs.cache

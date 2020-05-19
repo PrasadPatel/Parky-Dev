@@ -1,5 +1,4 @@
 D:\ASP .Net Core 3\Parky\ParkyAPI_XTest\obj\Debug\netcoreapp3.1\ParkyAPI_XTest.csprojAssemblyReference.cache
-D:\ASP .Net Core 3\Parky\ParkyAPI_XTest\obj\Debug\netcoreapp3.1\ParkyAPI_XTest.csproj.CoreCompileInputs.cache
 D:\ASP .Net Core 3\Parky\ParkyAPI_XTest\obj\Debug\netcoreapp3.1\ParkyAPI_XTest.AssemblyInfoInputs.cache
 D:\ASP .Net Core 3\Parky\ParkyAPI_XTest\obj\Debug\netcoreapp3.1\ParkyAPI_XTest.AssemblyInfo.cs
 D:\ASP .Net Core 3\Parky\ParkyAPI_XTest\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -219,3 +218,4 @@ D:\ASP .Net Core 3\Parky\ParkyAPI_XTest\obj\Debug\netcoreapp3.1\ParkyAPI_XTest.c
 D:\ASP .Net Core 3\Parky\ParkyAPI_XTest\obj\Debug\netcoreapp3.1\ParkyAPI_XTest.dll
 D:\ASP .Net Core 3\Parky\ParkyAPI_XTest\obj\Debug\netcoreapp3.1\ParkyAPI_XTest.pdb
 D:\ASP .Net Core 3\Parky\ParkyAPI_XTest\obj\Debug\netcoreapp3.1\ParkyAPI_XTest.genruntimeconfig.cache
+D:\ASP .Net Core 3\Parky\ParkyAPI_XTest\obj\Debug\netcoreapp3.1\ParkyAPI_XTest.csproj.CoreCompileInputs.cache
