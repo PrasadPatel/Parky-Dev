@@ -40,10 +40,10 @@ steps:
 - task: reportgenerator@4
   displayName: 'Run Report Generator'  
   inputs:
-    reports: '$(Build.SourcesDirectory)\TestResults\Coverage\coverage.xml'
+    reports: '$(Build.SourcesDirectory)\TestResults\Coverage\coverage.cobertura.xml'
     targetdir: '$(Build.SourcesDirectory)\coveragereport'
 - task: PublishCodeCoverageResults@1
   displayName: 'Publish Code Coverage Report'
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(Build.SourcesDirectory)\TestResults\Coverage\coverage.xml'
+    summaryFileLocation: '$(Build.SourcesDirectory)\TestResults\Coverage\coverage.cobertura.xml'
