@@ -37,8 +37,13 @@ steps:
     arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
     publishTestResults: true
     projects: '**/*_XTest/*.csproj' # update with your test project directory
+- task: reportgenerator@4
+  displayName: 'Run Report Generator'  
+  inputs:
+    reports: '$(Build.SourcesDirectory)\TestResults\Coverage\coverage.xml'
+    targetdir: '$(Build.SourcesDirectory)\coveragereport'
 - task: PublishCodeCoverageResults@1
   displayName: 'Publish Code Coverage Report'
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
+    summaryFileLocation: '$(Build.SourcesDirectory)\TestResults\Coverage\coverage.xml'
