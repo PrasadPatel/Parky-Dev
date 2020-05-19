@@ -33,23 +33,12 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: 'Run Unit Tests'
   inputs:
-    command: test
-    projects: '**/*_XTest/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
-- task: PublishTestResults@2
-  displayName: 'Publish Test Results' 
-  inputs:
-    testResultsFormat: 'XUnit'
-    testResultsFiles: '**/TEST-*.xml'
-- task: DotNetCoreCLI@2
-  displayName: 'dotnet test'
-  inputs:
     command: 'test'
     arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
     publishTestResults: true
-    projects: '**/test-library/*.csproj' # update with your test project directory
+    projects: '**/*_XTest/*.csproj' # update with your test project directory
 - task: PublishCodeCoverageResults@1
-  displayName: 'Publish code coverage report'
+  displayName: 'Publish Code Coverage Report'
   inputs:
     codeCoverageTool: 'Cobertura'
     summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
