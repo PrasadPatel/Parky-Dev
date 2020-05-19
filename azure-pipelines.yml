@@ -31,19 +31,36 @@ steps:
 # ...
 # do this after other tasks such as building
 - task: DotNetCoreCLI@2
-  displayName: 'Run Unit Tests'
+  displayName: 'Run Unit Tests for Parky API'
   inputs:
     command: 'test'
-    arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
+    arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/APIcoverage.cobertura.xml'
     publishTestResults: true
-    projects: '**/*_XTest/*.csproj' # update with your test project directory
-- task: reportgenerator@4
-  displayName: 'Run Report Generator'  
+    projects: '**/*_XTest/ParkyAPI_XTest.csproj' # update with your test project directory
+- task: DotNetCoreCLI@2
+  displayName: 'Run Unit Tests for Parky Web'
   inputs:
-    reports: '$(Build.SourcesDirectory)\TestResults\Coverage\coverage.cobertura.xml'
+    command: 'test'
+    arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/Webcoverage.cobertura.xml'
+    publishTestResults: true
+    projects: '**/*_XTest/ParkyWeb_XTest.csproj' # update with your test project directory    
+- task: reportgenerator@4
+  displayName: 'Run Report Generator for ParkyAPI'  
+  inputs:
+    reports: '$(Build.SourcesDirectory)\TestResults\Coverage\APIcoverage.cobertura.xml'
+    targetdir: '$(Build.SourcesDirectory)\coveragereport'
+- task: reportgenerator@4
+  displayName: 'Run Report Generator for ParkyWeb'  
+  inputs:
+    reports: '$(Build.SourcesDirectory)\TestResults\Coverage\Webcoverage.cobertura.xml'
     targetdir: '$(Build.SourcesDirectory)\coveragereport'
 - task: PublishCodeCoverageResults@1
-  displayName: 'Publish Code Coverage Report'
+  displayName: 'Publish Code Coverage Report for ParkyAPI'
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(Build.SourcesDirectory)\TestResults\Coverage\coverage.cobertura.xml'
+    summaryFileLocation: '$(Build.SourcesDirectory)\TestResults\Coverage\APIcoverage.cobertura.xml'
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish Code Coverage Report for ParkyWeb'
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: '$(Build.SourcesDirectory)\TestResults\Coverage\Webcoverage.cobertura.xml'    
