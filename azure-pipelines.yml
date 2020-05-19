@@ -32,7 +32,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: test
-    projects: '**/*Tests/*.csproj'
+    projects: '**/*_XTest/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 - task: PublishTestResults@2
   inputs:
@@ -43,5 +43,5 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: test
-    projects: '**/*Tests/*.csproj'
+    projects: '**/*_XTest/*.csproj'
     arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
