@@ -139,3 +139,4 @@ D:\ASP .Net Core 3\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\staticwebassets\ParkyA
 D:\ASP .Net Core 3\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.dll
 D:\ASP .Net Core 3\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.pdb
 D:\ASP .Net Core 3\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.genruntimeconfig.cache
+D:\ASP .Net Core 3\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.csprojAssemblyReference.cache
