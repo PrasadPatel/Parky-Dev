@@ -60,7 +60,7 @@ steps:
     codeCoverageTool: 'Cobertura'
     summaryFileLocation: '$(Build.SourcesDirectory)\TestResults\Coverage\APIcoverage.cobertura.xml'
 - task: PublishCodeCoverageResults@1
-  displayName: 'Publish Code Coverage Report for ParkyWeb'
+  displayName: 'Publish Code Coverage Report for ParkyWeb '
   inputs:
     codeCoverageTool: 'Cobertura'
     summaryFileLocation: '$(Build.SourcesDirectory)\TestResults\Coverage\Webcoverage.cobertura.xml'    
