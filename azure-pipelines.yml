@@ -29,21 +29,21 @@ steps:
     configuration: '$(buildConfiguration)'
 - task: DotNetCoreCLI@2
   inputs:
-    command: publish
+    command: build
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyAPIBuild'
     zipAfterPublish: True
     projects: '**/*/ParkyAPI.csproj'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: publish
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyWebBuild'
-    zipAfterPublish: True
-    projects: '**/*/ParkyWeb.csproj'
 - task: PublishBuildArtifacts@1
   inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)\ParkyAPIBuild'
         ArtifactName: 'dropapi'
         #publishLocation: 'Container'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: build
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyWebBuild'
+    zipAfterPublish: True
+    projects: '**/*/ParkyWeb.csproj'
 - task: PublishBuildArtifacts@1
   inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)\ParkyWebBuild'
