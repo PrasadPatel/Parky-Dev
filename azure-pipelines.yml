@@ -32,7 +32,7 @@ steps:
   inputs:
     command: publish
     publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\WebApp.zip'
     zipAfterPublish: True
 # ...
 # do this after other tasks such as building
@@ -60,13 +60,3 @@ steps:
   inputs:
     reports: '$(Build.SourcesDirectory)\TestResults\Coverage\Webcoverage.cobertura.xml'
     targetdir: '$(Build.SourcesDirectory)\coveragereport'
-- task: PublishCodeCoverageResults@1
-  displayName: 'Publish Code Coverage Report for ParkyAPI'
-  inputs:
-    codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(Build.SourcesDirectory)\TestResults\Coverage\APIcoverage.cobertura.xml'
-- task: PublishCodeCoverageResults@1
-  displayName: 'Publish Code Coverage Report for ParkyWeb '
-  inputs:
-    codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(Build.SourcesDirectory)\TestResults\Coverage\Webcoverage.cobertura.xml'    
