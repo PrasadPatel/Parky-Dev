@@ -33,7 +33,12 @@ steps:
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyAPIBuild'
     zipAfterPublish: True
     projects: '**/*/ParkyAPI.csproj'
-
+- task: DotNetCoreCLI@2
+  inputs:
+    command: publish
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyWebBuild'
+    zipAfterPublish: True
+    projects: '**/*/ParkyWeb.csproj'
 - task: PublishBuildArtifacts@1
   inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)\ParkyAPIBuild'
@@ -48,12 +53,7 @@ steps:
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)\ParkyAPIBuild'
     publishLocation: 'pipeline'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: publish
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyWebBuild'
-    zipAfterPublish: True
-    projects: '**/*/ParkyWeb.csproj'
+
 # Unit Testing
 - task: DotNetCoreCLI@2
   displayName: 'Run Unit Tests for Parky API'
