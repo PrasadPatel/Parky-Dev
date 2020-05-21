@@ -28,16 +28,16 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 - task: DotNetCoreCLI@2
-  displayName: 'Build for Parky API'
   inputs:
-    command: 'build'
-    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyAPIBuild.zip'
+    command: publish
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyAPIBuild.zip'
+    zipAfterPublish: True
     projects: '**/*/ParkyAPI.csproj'
 - task: DotNetCoreCLI@2
-  displayName: 'Build for Parky Web'
   inputs:
-    command: 'build'
-    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyWebBuild.zip'
+    command: publish
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyWebBuild.zip'
+    zipAfterPublish: True
     projects: '**/*/ParkyWeb.csproj'
 # Unit Testing
 - task: DotNetCoreCLI@2
