@@ -33,6 +33,21 @@ steps:
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyAPIBuild'
     zipAfterPublish: True
     projects: '**/*/ParkyAPI.csproj'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)\ParkyAPIBuild'
+        ArtifactName: 'dropapi'
+        #publishLocation: 'Container'
+- task: PublishBuildArtifacts@1
+  inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)\ParkyWebBuild'
+        ArtifactName: 'dropweb'
+        #publishLocation: 'Container'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)\ParkyAPIBuild'
+    publishLocation: 'pipeline'
 - task: DotNetCoreCLI@2
   inputs:
     command: publish
