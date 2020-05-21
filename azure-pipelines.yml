@@ -25,17 +25,21 @@ steps:
   displayName: 'Build Projects'
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 - task: DotNetCoreCLI@2
+  displayName: 'Build for Parky API'
   inputs:
-    command: publish
-    publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)\WebAppPublish.zip'
-    zipAfterPublish: True
-# ...
-# do this after other tasks such as building
+    command: 'build'
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyAPIBuild.zip'
+    projects: '**/*/ParkyAPI.csproj'
+- task: DotNetCoreCLI@2
+  displayName: 'Build for Parky Web'
+  inputs:
+    command: 'build'
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)\ParkyWebBuild.zip'
+    projects: '**/*/ParkyWeb.csproj'
+# Unit Testing
 - task: DotNetCoreCLI@2
   displayName: 'Run Unit Tests for Parky API'
   inputs:
