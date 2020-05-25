@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "SlVQyCObUNedVvnOjHf5ponfBuLZPqdqjteIXre803i57wMF5XaqNzDoMCkCs42H0N597ixAEXIhKWAXc7enlA==",
+  "dgSpecHash": "nSV5ChtCkI+Rujms/QQ2Sss0YkUA/Oq6pRj7nudqugstlF4Hk91SzeIPZWNnMc8Wb/6H7cVuaWXpgIZwTpxAjQ==",
   "success": true,
   "projectFilePath": "D:\\ASP .Net Core 3\\Parky\\ParkyWeb_XTest\\ParkyWeb_XTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\coverlet.msbuild\\2.8.1\\coverlet.msbuild.2.8.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
